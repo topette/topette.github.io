@@ -59,7 +59,7 @@ export const Menu = () => {
               to={"estudios"}
               onClick={showMenu}
             >
-              <li className="menutopette">Skills</li>
+              <li className="menutopette">Education</li>
             </Link>
             <Link
               spy

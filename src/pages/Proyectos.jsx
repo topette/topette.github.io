@@ -16,18 +16,20 @@ export const Proyectos = () => {
     try {
       const respuesta = await proyectosApi.get("/proyectos");
       setGetProyectos(respuesta.data);
-      console.log(respuesta.data);
+
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
+    <>
     <div className="bg-menuheader2">
+    <div className="container mx-auto">
       <div id="proyectos">
-      <div className=" flex items-center justify-center p-4 pt-16">
-        <div className="titulo">Projects</div>
-      </div>
+        <div className=" flex items-center justify-center p-4 pt-16">
+          <div className="titulo">Projects</div>
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 p-4 place-items-center">
         {getProyectos.map((proyecto) => (
@@ -35,8 +37,10 @@ export const Proyectos = () => {
             key={proyecto.id}
             className="md:flex md:items-center md:justify-center px-2 md:m-8 m-4 md:w-[85%]"
           >
-            <div class="absolute flex items-center justify-center w-10 h-10 transform -translate-x-1/2 -translate-y-4 bg-indigo-400 border-2 border-white rounded-full left-1/2 sm:translate-y-0">
-               <span className="text-white"><IoIosArrowDown /></span>
+            <div className="absolute hidden md:flex items-center justify-center w-10 h-10 transform -translate-x-1/2 -translate-y-4 bg-indigo-400 border-2 border-white rounded-full left-1/2 sm:translate-y-0">
+              <span className="text-white">
+                <IoIosArrowDown />
+              </span>
             </div>
             <div className="absolute hidden w-px h-[40%] transform -translate-x-1/2 bg-indigo-300 lg:block left-1/2"></div>
             <div className="md:flex font-sans bg-white rounded-md grid grid-flow-row">
@@ -102,14 +106,14 @@ export const Proyectos = () => {
                       <BiLinkExternal className="text-1xl mr-2" /> En vivo
                     </div>
                   </a>
-                  
                 </div>
-                
               </div>
             </div>
           </div>
         ))}
       </div>
     </div>
+    </div>
+    </>
   );
 };

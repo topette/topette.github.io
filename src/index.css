@@ -56,7 +56,7 @@ body {
 
 .banner {
   width: 100%;
-  height: 600px;
+ /* height: 600px;*/
   position: relative;
 }
 
@@ -94,7 +94,7 @@ body {
 
 .layer2 {
   background-image: url('./assets/portatil.png');
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
 }
 
@@ -110,14 +110,171 @@ body {
 
  }
 
- /* Skills animation */
+ /* Skills animations */
 
- @keyframes skill1 {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
+ @keyframes skill-animate1 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(90%);
+    }
 }
 
+@keyframes skill-animate2 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(90%);
+    }
+}
+
+@keyframes skill-animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(99%);
+    }
+}
+
+.skillanimate1 {
+    animation: skill-animate1 1s ease infinite alternate;
+}
+
+.skillanimate2 {
+    animation: skill-animate2 3s ease infinite alternate;
+}
+
+.skillanimate3 {
+    animation: skill-animate3 0.5s ease infinite alternate;
+}
+
+ /* Skill numbers animations 1 */
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 50;
+  inherits: false;
+}
+
+.skillnumber1 {
+  animation: counter 1s infinite alternate ease-in-out;
+  counter-reset: num var(--num);
+}
+.skillnumber1::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 50;
+  }
+  to {
+    --num: 85;
+  }
+}
+
+/* Skill numbers animations 2 */
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 50;
+  inherits: false;
+}
+
+.skillnumber2 {
+  animation: counter 2s infinite alternate ease-in-out;
+  counter-reset: num var(--num);
+}
+.skillnumber2::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 80;
+  }
+  to {
+    --num: 95;
+  }
+}
+
+
+/* Skill numbers animations 3 */
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 90;
+  inherits: false;
+}
+
+.skillnumber3 {
+  animation: counter 2s infinite alternate ease-in-out;
+  counter-reset: num var(--num);
+}
+.skillnumber3::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 90;
+  }
+  to {
+    --num: 95;
+  }
+}
+
+
+/* Skill numbers animations 4 */
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 50;
+  inherits: false;
+}
+
+.skillnumber4 {
+  animation: counter 2s infinite alternate ease-in-out;
+  counter-reset: num var(--num);
+}
+.skillnumber4::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 50;
+  }
+  to {
+    --num: 65;
+  }
+}
+
+
+/* Skill numbers animations 5 */
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 50;
+  inherits: false;
+}
+
+.skillnumber5 {
+  animation: counter 2s infinite alternate ease-in-out;
+  counter-reset: num var(--num);
+}
+.skillnumber5::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 60;
+  }
+  to {
+    --num: 70;
+  }
+}

@@ -33,12 +33,12 @@ export const LandingPage = () => {
 
         <Proyectos />
 
-        <Parallax>
-        <Estudios />
+        <Parallax strength={200}>
+        <Experiencia />
       </Parallax>
 
-      <Parallax strength={200}>
-        <Experiencia />
+        <Parallax>
+        <Estudios />
       </Parallax>
 
       <Parallax

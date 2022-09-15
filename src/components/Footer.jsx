@@ -2,6 +2,10 @@ import { AiFillTwitterCircle, AiFillGithub, AiFillBehanceCircle, AiFillLinkedin,
 import { FaDeviantart } from "react-icons/fa";
 
 export const Footer = () => {
+  const openInNewTab = url => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <>
       <footer className="relative bg-blueGray-200 pt-8 pb-6 text-white">
@@ -20,12 +24,12 @@ export const Footer = () => {
                 <div className="w-full lg:w-8/12 px-4 ml-auto">
 
                     <div className="inline-grid grid-cols-6 gap-4 ">
-                      <AiFillGithub className="text-6xl hover:text-topettegreen cursor-pointer duration-200 items-center justify-center align-center" />
-                      <AiFillTwitterCircle className="text-6xl hover:text-topettegreen cursor-pointer duration-200 items-center justify-center align-center" />
-                      <AiFillBehanceCircle className="text-6xl hover:text-topettegreen cursor-pointer duration-200 items-center justify-center align-center" />
-                      <AiFillLinkedin className="text-6xl hover:text-topettegreen cursor-pointer duration-200 items-center justify-center align-center" />
-                      <FaDeviantart className="text-6xl hover:text-topettegreen cursor-pointer duration-200 items-center justify-center align-center" />
-                      <AiFillYoutube className="text-6xl hover:text-topettegreen cursor-pointer duration-200 items-center justify-center align-center" />
+                      <a onClick={() => openInNewTab('https://github.com/topette')}><AiFillGithub className="text-6xl hover:text-topettegreen cursor-pointer duration-200 items-center justify-center align-center" /></a>
+                      <a onClick={() => openInNewTab('https://twitter.com/topette')}><AiFillTwitterCircle className="text-6xl hover:text-topettegreen cursor-pointer duration-200 items-center justify-center align-center" /></a>
+                      <a onClick={() => openInNewTab('https://behance.net/topette')}><AiFillBehanceCircle className="text-6xl hover:text-topettegreen cursor-pointer duration-200 items-center justify-center align-center" /></a>
+                      <a onClick={() => openInNewTab('https://www.linkedin.com/in/oscar-leonardo-osorio-serrato-03ab639/')}><AiFillLinkedin className="text-6xl hover:text-topettegreen cursor-pointer duration-200 items-center justify-center align-center" /></a>
+                      <a onClick={() => openInNewTab('https://deviantart.com/topette')}><FaDeviantart className="text-6xl hover:text-topettegreen cursor-pointer duration-200 items-center justify-center align-center" /></a>
+                      <a onClick={() => openInNewTab('https://www.youtube.com/c/topette')}><AiFillYoutube className="text-6xl hover:text-topettegreen cursor-pointer duration-200 items-center justify-center align-center" /></a>
 
                   </div>
                 </div>
