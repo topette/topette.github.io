@@ -1,0 +1,41 @@
+{
+  "name": "miportafolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.7.0",
+    "@mikekorakakis/react-3d-animated-card": "^1.0.12",
+    "@sl-codeblaster/react-3d-animated-card": "^1.0.8",
+    "axios": "^0.27.2",
+    "leva": "^0.9.31",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "react-parallax": "^3.5.1",
+    "react-particles": "^2.2.4",
+    "react-router-dom": "6",
+    "react-scroll": "^1.8.7",
+    "react-spring": "^9.5.4",
+    "react-tsparticles": "^2.3.1",
+    "sweetalert2": "^11.4.32",
+    "tsparticles": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
+    "vite": "^3.0.7"
+  },
+  "peerDependencies": {
+    "react-spring": "^8.x"
+  }
+}
