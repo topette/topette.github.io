@@ -23,7 +23,7 @@ export const Proyectos = () => {
     }
   };
 
-  if(!getHeroes.length){
+  if(!getProyectos.length){
     return (<div className="flex justify-center items-center mt-72"><Loader /></div>)
   }
 
