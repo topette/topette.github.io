@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import proyectosApi from "../api/proyectosApi";
 import { IoIosArrowDown } from "react-icons/io";
+import { Loader } from "../components/Loader";
 
 export const Proyectos = () => {
   const [getProyectos, setGetProyectos] = useState([]);
@@ -21,6 +22,10 @@ export const Proyectos = () => {
       console.log(error);
     }
   };
+
+  if(!getHeroes.length){
+    return (<div className="flex justify-center items-center mt-72"><Loader /></div>)
+  }
 
   return (
     <>
@@ -103,7 +108,7 @@ export const Proyectos = () => {
                       className="h-10 flex items-center px-2 font-semibold rounded-full border border-slate-200 hover:bg-slate-200 text-slate-900 cursor-pointer"
                       type="button"
                     >
-                      <BiLinkExternal className="text-1xl mr-2" /> En vivo
+                      <BiLinkExternal className="text-1xl mr-2" /> Live
                     </div>
                   </a>
                 </div>
